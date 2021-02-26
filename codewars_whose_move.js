@@ -20,8 +20,23 @@ For lastPlayer = "black" and win = false, the output should be "white".
 For lastPlayer = "white" and win = true, the output should be "white".
 */
 
-function whoseMove(lastPlayer, win) {
-  //coding and coding..
-  
-  
+const whoseMove = (lastPlayer, win) => {
+  let lastBlack = false;
+  if(lastPlayer === 'black') {
+    lastBlack = true;
+  }
+  if(win === false) {
+    if(lastBlack === true) {
+      return 'white';
+    } else {
+      return 'black';
+    }
+  }
+  if(win === true) {
+    if(lastBlack === true) {
+      return 'black';
+    } else {
+      return 'white';
+    }
+  }
 }
